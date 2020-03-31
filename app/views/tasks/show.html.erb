@@ -1,7 +1,21 @@
-<h2><%= @task.title %></h2>
-<p><%=  @task.details %></p>
-<p><%=  @task.completed %></p>
+ <h2><%= @task.title %></h2>
+<div class="list">
+  <% if @task.completed == true %>
+    <li><i class="far fa-check-circle"></i></li>
+  <% else %>
+    <li><i class="far fa-circle"></i></li>
+  <% end %>
+  <p><%=  @task.details %></p>
+</div>
 
 <div>
   <%= link_to 'See every tasks', tasks_path %>
+</div>
+
+<div>
+  <%= link_to 'Edit', edit_task_path(@task) %>
+</div>
+
+<div>
+  <%= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

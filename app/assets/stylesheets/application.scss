@@ -1,0 +1,22 @@
+@import "bootstrap/scss/bootstrap";
+
+li {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+i {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list {
+  display: flex;
+}
