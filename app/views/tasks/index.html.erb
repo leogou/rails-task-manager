@@ -3,9 +3,9 @@
 <ul>
   <% @tasks.each do |task| %>
     <% if task.completed == true %>
-      <li><i class="far fa-check-circle"></i><%= link_to task.title, task_path(task) %></li>
+      <li><i class="far fa-check-circle"></i><%= link_to task.title, task_path(task) %><i class="fas fa-trash-alt"></i><%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure?' } %></li>
     <% else %>
-      <li><i class="far fa-circle"></i><%= link_to task.title, task_path(task) %></li>
+      <li><i class="far fa-circle"></i><%= link_to task.title, task_path(task) %><i class="fas fa-trash-alt"></i><%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: 'Are you sure?' } %></li>
     <% end %>
   <% end %>
 </ul>
